@@ -35,7 +35,7 @@ Call them with `v('type', ...)`. The build enforces the character limits in `vsl
 
 | Type | Explains | Parameters (max characters) |
 | --- | --- | --- |
-| `pills` | The list of old methods, sharing one flaw | `items` 2 to 4 (16), optional `icon` |
+| `pills` | The list of old methods, sharing one flaw | `items` 2 to 4 (16), optional `icon`, `baseline` |
 | `fanout` | One thing sold or spread to many, with "you" as one of them | `from` (22), `you` (10) |
 | `shift` | The direction reversing between then and now | `left` `right` (22), `a` `b` (14), optional `ia` `ib` icons |
 | `curves` | Slow asset against fast system. Two states with `two` | `slow` `fast` (18), `axis` (12), `two` |
@@ -49,6 +49,8 @@ v('curves', slow='Reputation', fast='System', axis='Time', two=True)
 v('bars', a=dict(label='Today', share=.33, value='3 weeks'), b=dict(label='Normally', share=.67, extra=.33, value='6 to 9 weeks'), two=True)
 ```
 
+`pills` draws a line and a small icon under the row, a clock by default, for methods that all mean waiting. Change `icon`, or pass `baseline=False` when the sentence is not about time.
+
 `share` is a fraction of the track. `extra` adds a fainter range after it. Above .7, `a.value` moves inside the bar.
 
 ### Show how it works
@@ -60,7 +62,7 @@ v('bars', a=dict(label='Today', share=.33, value='3 weeks'), b=dict(label='Norma
 | `numbers` | Three moves, numbered | `items` 3 (18) |
 | `pillars` | The mechanism's three pillars. `on=0` all, `on=1` to `3` one lit | `items` 3 `[label (11), icon]`, `on` |
 | `filter` | Many enter, few pass the criteria | `label` (22) |
-| `phone` | A request arriving, and how fast you respond | `notif` 2 (9 each), `big` (6), `caption` (30) |
+| `phone` | A request arriving, and how fast you respond | `notif` 2 (9 each), `big` (5), `caption` (30) |
 | `card` | What one incoming request looks like | `title` (30), optional `tag` (12), `rows` 4 `[label (16), value (26)]` |
 | `install` | Setup time on a three-point line | `big` (11), `steps` 3 (14) |
 
@@ -95,6 +97,8 @@ Tag any illustrative interface with `Example`.
 | `twin` | Two separate amounts. `both=False` dims the second | `a` and `b`: `[title (20), line (32), sub (32)]`, `both` |
 | `deadline` | A time window and what happens at its end. `tick` marks the end | `start` `end` (12), `title` (44), `sub` (52), `tick` |
 | `contract` | The clause, highlighted, signed | `lines` 2 (34) |
+
+`twin` does not need amounts. "Given in writing" is a valid line when the price is not set.
 
 ### Show the action
 

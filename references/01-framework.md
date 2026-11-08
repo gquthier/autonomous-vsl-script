@@ -20,7 +20,7 @@ Six blocks. `hook` always comes first. The others may swap when one lands harder
 | --- | --- | --- |
 | `hook` | Names who this is for, then opens a question they cannot leave unanswered | "If you run a [business], one question." then the question |
 | `promise` | States the precise result | [result] in [delay], without [pain], even if [objection] |
-| `pain` | Describes today in their own words | Two or three verbatims, then one hard fact about the market |
+| `pain` | Describes today in their own words | Two or three verbatims, then one hard fact about the market if a sourced one exists |
 | `proof` | Makes the promise believable at once, one to three items | Who you are in one line, then the strongest figures |
 | `plan` | Says where the video is going | One sentence |
 | `picture` | Makes them see life after the result | One concrete moment: a day, a desk, a phone |
@@ -61,6 +61,10 @@ Order the loops the way the questions naturally arrive:
 8. How much does it cost? (`kind='price'`)
 9. What if it does not work? (`kind='guarantee'`)
 10. Is the free thing a disguised sales call?
+
+That is a default order. Keep the objections your research actually found, in the order they arrive. If answering one needs a fact you do not have, security for instance, leave the loop out and flag it for the owner. Do not write a claim to fill it.
+
+The same client may close several loops when each one shows something different about it. Use another figure or angle each time.
 
 Long format: 6 to 10 loops. Short format: 3 to 5. Offer, price and guarantee are mandatory in both. The mechanism is named 4 to 6 times across the loops (2 to 4 in short format).
 

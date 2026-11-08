@@ -42,6 +42,8 @@ function chrome() {
             const vb = svg.viewBox.baseVal;
             svg.querySelectorAll('text').forEach(t => { const b = t.getBBox(); if (b.x < -1 || b.y < -1 || b.x + b.width > vb.width + 1 || b.y + b.height > vb.height + 3) svgOut = t.textContent; });
             svg.querySelectorAll('g').forEach(g => {
+              const ring = g.querySelector(':scope > circle'), big = g.querySelector(':scope > text.big');
+              if (ring && big && big.getBBox().width > 2 * ring.r.baseVal.value - 2) svgOut = big.textContent;
               const box = g.querySelector(':scope > rect.nd'); if (!box) return;
               const R = box.getBBox();
               g.querySelectorAll(':scope > text').forEach(t => { const b = t.getBBox(); if (b.x < R.x - 1 || b.x + b.width > R.x + R.width + 1) svgOut = t.textContent; });

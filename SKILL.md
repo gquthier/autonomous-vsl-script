@@ -21,7 +21,7 @@ Read these before writing. They are the skill, not background:
 ## Four rules that do not bend
 
 1. **Five parts, in order.** Intro, old way vs new way, FAQ loops, small CTA, proof salad. No other section. The offer, price, guarantee and urgency are answers to FAQ questions. `build.py` assembles the parts itself, so the order cannot drift.
-2. **Real proof only.** Never invent a figure, client, quote or result. Every number on screen is declared in `proof_inventory` with its source, and carries a context line naming the sector, so a result from another trade never reads as one from the viewer's. If proof is missing, ask for it. For a rehearsal draft, write `[PROOF NEEDED: what is missing]` and build with `--draft`. A draft is never a deliverable.
+2. **Real proof only.** Never invent a figure, client, quote or result. Every stat on screen must match an entry in `proof_inventory`, which records its source, and carries a context line naming the sector, so a result from another trade never reads as one from the viewer's. The build can only check stats. Figures spoken in `text` or written in `key` are yours to trace in the review pass. If proof is missing, ask for it. For a rehearsal draft, write `[PROOF NEEDED: what is missing]` and build with `--draft`. A draft is never a deliverable.
 3. **The design is locked.** Change the eight colors, the logo and the words. Keep the fonts, type scale, layout, timings and diagrams. If a client wants a different layout, this is the wrong skill.
 4. **Local by default.** Build and verify on the machine. Publishing the deck, sending it, or wiring it to a booking tool needs its own explicit request.
 
@@ -81,6 +81,8 @@ Replace every line of `content.py`. Its example is fictional: do not carry any o
 
 One slide carries one idea, 27 spoken words at most. `text` is written for the ear, numbers spelled out as they are said. `key` is the line on screen, nine words at most, digits welcome. Mark the phrase to remember with `*asterisks*`, on about two slides out of three.
 
+If the material is thin, make a shorter video. See "When the material is thin" in [02-copywriting.md](references/02-copywriting.md). Never add a fact to reach a word count.
+
 ### 6. Stage it
 
 Open [05-animations.md](references/05-animations.md) and pick a diagram wherever a mechanism, comparison, sequence or offer is easier to see than to hear. Roughly one slide in three carries one. Use two-state reveals: the same diagram on consecutive slides, with more lit on the second. Leave pure emotion and short punchlines as text alone. Never restate the `key` inside the diagram.
@@ -99,7 +101,7 @@ It lists every problem at once and refuses to produce a deck until they are fixe
 node verify.cjs
 ```
 
-It walks every slide in three viewports and both modes, tests every control and the synced presenter window, and captures one slide per diagram into `dist/verification/captures/`. Then **open the captures and look at them**. The script catches overflow and broken controls. It cannot tell whether a diagram explains anything.
+It walks every slide in three viewports and both modes, tests every control and the synced presenter window, and captures each diagram type plus the key slides, in both modes, into `dist/verification/captures/`, with a mobile capture and the presenter window. Then **open the captures and look at them**. The script catches overflow and broken controls. It cannot tell whether a diagram explains anything.
 
 ### 9. Review the copy
 
@@ -107,7 +109,7 @@ Run the review pass at the end of [02-copywriting.md](references/02-copywriting.
 
 ### 10. Deliver
 
-State plainly: the deck path, script path, word count and estimated duration, the mechanism and the CTA question, what was checked, and what still needs a human decision. That last list usually holds legal review of the guarantee, amounts not yet set, deliverables that must stay true (a free bonus, a deadline), and adding the CTA question to the real booking form. Tell the user how to drive the deck: `L` reading or screen, `N` notes, `P` presenter, `F` full screen, `A` animations, arrows to move.
+State plainly: the deck path, script path, word count and estimated duration, the mechanism and the CTA question, what was checked, and what still needs a human decision. That last list usually holds legal review of the guarantee, amounts not yet set, deliverables that must stay true (a free bonus, a deadline), adding the CTA question to the real booking form, objections left out because no known fact answers them, any market fact you could not source, and every mechanism description or image you wrote yourself and the owner must confirm. Tell the user how to drive the deck: `L` reading or screen, `N` notes, `P` presenter, `F` full screen, `A` animations, arrows to move.
 
 ## Editing a deck built with this skill
 

@@ -69,7 +69,7 @@ Write these in `BRIEF.md` and do not move on until each one is sharp.
 
 **Hook.** First sentence selects the viewer by identity. Second opens the question. No greeting, no name, no warm-up.
 
-**Pain.** Their words, in quotation marks. Then one external, dated fact. Do not exaggerate. An accurate description of their week is more painful than any adjective.
+**Pain.** Their words, in quotation marks. Then one external, dated fact. No sourced fact? Use the verbatims alone and list the gap when you deliver. Do not exaggerate. An accurate description of their week is more painful than any adjective.
 
 **Respect the old way.** They built their business with it. Say so before you say why it stopped being enough: "Your reputation built your business. Keep it. It does not let you choose." Condescension loses the room.
 
@@ -95,6 +95,10 @@ Write these in `BRIEF.md` and do not move on until each one is sharp.
 **CTA.** The smallest possible next step, and a question that makes the next conversation theirs.
 
 **Proof salad.** Variety matters: figures, named companies, quotes, totals. Quotes are exact. Always name the sector.
+
+## When the material is thin
+
+A thin brief makes a shorter video, so choose the short format. If you stay long, lengthen only with what you already know: the "why that helps me" under each pillar, the offer and guarantee stages, dense slides split in two. Never add a fact, client, number or example to reach a word count. A figure you cannot source and a mechanism detail the owner never gave you are the same mistake.
 
 ## Sentence rules
 

@@ -36,7 +36,7 @@ Most sales videos get written in a document, then squeezed into slides, then rea
 This skill gives a coding agent the whole path, from research to a deck you can film. One script drives everything: what you read, what viewers see, the notes, and the printable version.
 
 - **A structure that cannot drift.** Intro, old way against new way, FAQ loops, small call to action, proof. The compiler assembles the parts itself and refuses a deck that skips one.
-- **Proof that cannot be invented.** A figure only reaches the screen if it is declared with its source, and every result names its sector.
+- **Proof you have to declare.** Every stat on screen must match an inventory that records its source, and every result names its sector.
 - **Copy that has to earn its place.** Awareness, sophistication, the value equation, verbatim research, a named mechanism, and a review pass. The build rejects hype, walls of text and machine-sounding prose.
 - **A screen you can film.** One idea per slide, one accent color, a toolbar that disappears when the mouse stops.
 - **Diagrams that explain.** 23 animated SVG diagrams for comparisons, journeys, offers, prices and guarantees, all driven by a line of data.
@@ -134,10 +134,10 @@ The build enforces what can be enforced:
 | --- | --- |
 | Structure | A missing block, a mechanism not named at the end of part 2, a FAQ stage left out |
 | Offer | No loop for offer, price or guarantee |
-| Proof | A figure outside the declared inventory, a result without its sector, an argument after the CTA |
+| Proof | A stat outside the declared inventory, a result without its sector, an argument after the CTA |
 | CTA | The personalization question not asked word for word |
 | Voice | Fewer than two customer verbatims, the mechanism repeated too little or too much |
-| Length | Over 27 words on a slide, over 9 on screen, outside the format's range |
+| Length | Over 27 words on a slide, over 9 on screen, over the format's maximum |
 | Style | Hype, exclamation marks, emoji, serial "it is not X, it is Y", your own banned words |
 
 ## The design
@@ -185,7 +185,9 @@ assets/demo/                 The built starter deck
 
 The design and pacing were extracted from one real 104-slide French VSL. Its brand, clients and figures are not in this repository. The starter is synthetic, and its figures are labeled as fictional on screen.
 
-CI runs 20 offline tests, builds the starter, and walks every slide in a real browser. Those checks catch structure, overflow, broken controls and forbidden words. They **cannot judge whether an argument is any good**, so read the script aloud and look at the captures.
+CI runs the offline tests, builds the starter, and walks every slide in a real browser. Those checks catch structure, overflow, broken controls and forbidden words. They **cannot judge whether an argument is any good**, and they only verify figures shown as stats, so read the script aloud, trace every number and look at the captures.
+
+Before this version, a separate agent with nothing but this repository built a complete 104-slide English deck on invented test data. The build and browser check passed, and the gaps it reported in the instructions are fixed here.
 
 This repository contains no conversion data, and nothing here promises a result. Guarantees, regulated professions and health or financial claims need review by someone qualified before broadcast. Any deadline or free bonus you announce has to be true.
 

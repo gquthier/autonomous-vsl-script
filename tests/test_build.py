@@ -151,6 +151,21 @@ class BuildTests(unittest.TestCase):
         self.deck.append("OLD_NEW[0]['slides'][1]['v']['items'][0] = 'Un libellé bien trop long'")
         self.refused('the drawing holds')
 
+    def test_too_many_words_refused(self):
+        self.deck.append("FAQ[2]['stages'][2] += [s(' '.join(['mot'] * 20), 'Mot.') for _ in range(6)]")
+        self.refused('at most')
+
+    def test_short_script_warns_instead_of_forcing_padding(self):
+        self.deck.brand(format='long')
+        self.deck.append("FAQ.append(dict(FAQ[0], kind='extra'))")
+        r = self.deck.build()
+        self.assertEqual(r.returncode, 0, r.stderr)
+        self.assertTrue(any('Do not pad' in w for w in json.loads(r.stdout)['warnings']))
+
+    def test_phone_label_must_fit_its_circle(self):
+        self.deck.append("OLD_NEW[3]['slides'][4]['v']['big'] = 'Monday'")
+        self.refused('the drawing holds')
+
     def test_unknown_visual_refused(self):
         self.deck.append("OLD_NEW[0]['slides'][1]['v'] = v('hologram')")
         self.refused('unknown visual')

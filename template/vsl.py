@@ -50,7 +50,7 @@ VISUALS = {
     'road': lambda p: [],
     'pillars': lambda p: [(x[0], 11) for x in p['items']],
     'card': lambda p: [(p['title'], 30), (p.get('tag', ''), 12)] + [(r[0], 16) for r in p['rows']] + [(r[1], 26) for r in p['rows']],
-    'phone': lambda p: [(p['notif'][0], 9), (p['notif'][1], 9), (p['big'], 6), (p['caption'], 30)],
+    'phone': lambda p: [(p['notif'][0], 9), (p['notif'][1], 9), (p['big'], 5), (p['caption'], 30)],
     'filter': lambda p: [(p['label'], 22)],
     'owned': lambda p: [(x, 19) for x in p['items']] + [(p['caption'], 30)],
     'contract': lambda p: [(x, 34) for x in p['lines']],

@@ -24,7 +24,7 @@ Derived tints: `--f12`, `--f18`, `--f20` from `fg`, and `--a08`, `--a12`, `--a15
 
 The build refuses a palette that fails these contrast ratios: `fg` on `bg` 7:1, `soft` on `bg` 4.5:1, `mut` on `bg` 3:1, `accent` on `bg` 4.5:1, `on_accent` on `accent` 4.5:1, `accent` on `panel` 3:1. `palettes.json` has four sets that pass: `ink-gold` (default), `midnight-mint`, `ember`, and a light one, `paper`.
 
-Choosing your own: keep one accent only. Derive `node` and `panel` by lifting `bg` slightly. Keep the warmth of the neutrals consistent with the accent.
+Choosing your own: keep one accent only. Derive `node` and `panel` by lifting `bg` slightly. Make `soft` about 15% of the way from `fg` to `bg`, and `mut` about 40%. Keep the warmth of the neutrals consistent with the accent.
 
 ## Type
 

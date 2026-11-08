@@ -18,11 +18,11 @@ A deck is two files: `brand.json` holds what is specific to the brand, `content.
 | `mechanism` | The name exactly as spoken, for example `méthode Relais` |
 | `cta.button` | Button label |
 | `cta.question` | The personalization question, asked word for word in the CTA |
-| `cta.reminder` | A word the last slide must contain, for example `Réservez` |
-| `verbatims` | Exact customer phrases. At least two must be quoted in the script |
+| `cta.reminder` | A word the last slide must contain, case-insensitive, for example `Réservez` |
+| `verbatims` | Exact customer phrases. At least two must appear word for word in the spoken `text`. `key` and notes do not count |
 | `banned` | Words to refuse for this market, added to the defaults |
 | `allow` | Default banned words this market legitimately uses |
-| `proof_inventory` | Each `{value, label, source}`. A figure on screen must match a `value` exactly |
+| `proof_inventory` | Each `{value, label, source}`. A stat must match a `value` exactly, spacing included: `4.9 / 5` is not `4.9/5`. Only `stats` are checked, so trace figures in `text` and `key` by hand |
 
 ## content.py
 
@@ -40,7 +40,7 @@ One slide.
 | `note` | Notes panel and script only | Sources, legal flags, filming directions |
 | `stats` | Giant figures | Up to two `(value, label)` pairs |
 | `who` | Proof line | Name of the client or person |
-| `context` | Proof line | Sector or source. Required with any stat |
+| `context` | Proof line | Sector or source. Required with any stat and on every proof-salad slide, testimonials included |
 
 ### b(role, *slides)
 
@@ -107,7 +107,7 @@ FAQ = [
 | `banned expression` | A forbidden word | Rewrite. Use `allow` only if it is the market's own word |
 | `"it is not X, it is Y"` | More than two | Rewrite |
 | `customer verbatim` | Fewer than two exact quotes | Quote from the research |
-| `n words` | Outside the format's range | Cut or extend |
+| `n words` | Above the format's maximum | Cut. Below the minimum is a warning only: do not pad, see `02-copywriting.md` |
 | `contrast too low` | Palette is hard to read | Adjust the color named |
 
 Warnings do not block. They flag part shares outside the target range.

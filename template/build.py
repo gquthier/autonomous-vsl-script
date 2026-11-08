@@ -273,8 +273,10 @@ found = [x for x in verbatims if low(x) in low(spoken)]
 if len(found) < 2:
     err(f'{len(found)} customer verbatim(s) quoted, at least 2 from brand.json are required')
 lo, hi = F['words']
-if not lo <= WORDS <= hi:
-    err(f'{WORDS} words, the {fmt} format needs {lo} to {hi}')
+if WORDS > hi:
+    err(f'{WORDS} words, the {fmt} format holds {hi} at most. Cut, or change format')
+elif WORDS < lo:
+    warn(f'{WORDS} words, below the {fmt} range ({lo} to {hi}). Do not pad: add real material, or set format to short')
 shares = {p: round(sum(s['duration'] for s in SLIDES if s['section'] == p) / SECONDS * 100, 1) if SECONDS else 0 for p in PARTS}
 for p, (lo, hi) in zip(PARTS, PART_SHARE):
     if not lo <= shares[p] <= hi:
